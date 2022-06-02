@@ -1,0 +1,41 @@
+def main():
+    print(square(n=10))
+    userInput = int(input("Give me a number to square: "))
+    print(square(userInput))
+#passing a default argument in line 2. setting parameter of the function equal to a default value
+#then you take the input, set it to a variable, then call square to override the valuye of userInput to whatever the user input was
+#???what's the difference between
+#???printing inside the function or calling the function with print?
+    print(greet(to="Anton"))
+    userinputName = input("OK, What's your name? ").strip().capitalize()
+    print(greet(userinputName))
+#same thing here, what's the point of setting the parameter of the function greet?
+#versus just passing "Anton"
+#answer: you will see code written both ways, it might be easier to see and track but it's important to write and understand code
+
+    answer = input("Would you like me to multiply by 5? ").strip().capitalize()
+    if answer == "Yes":
+        print(userInput * 5)
+    else:
+        print("Alright...?")
+
+#if you write if, and use elif statements - does 'elif' trgger on the first if statement first and not execute following elif statements?
+
+    print(favoritecar("Red"))
+#I can put colorgiven="Red"
+#does it just make it easier for me to follow???
+    color = input(f"What's your favorite color {userinputName}??? ").strip()
+    print(favoritecar(color))
+
+
+def square(n):
+    return n * n
+def greet(to):
+    print(to, "... A fine name...")
+    print(to)
+    # you can use what you passed as a parameter in order to use it within
+    # the function like above.  you can use it however you want
+def favoritecar(colorgiven):
+    print("Is your favorite car a", colorgiven, "Ferrari?")
+    print(colorgiven)
+main()
