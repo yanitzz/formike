@@ -1,0 +1,35 @@
+def main():
+    input1 = input("Greeting: ").strip().capitalize()
+    if input1.startswith("Hello",0,5):
+        print("$0")
+    elif input1.startswith("H", 0, 1):
+        print("$20")
+    else:
+        print("$100")
+main()
+
+x = int(input("What's x? "))
+y = int(input("What's y? "))
+
+if x < y:
+    print("x is less than y")
+elif x > y:
+    print("x is greater than y")
+else:
+    print("x is equal to y")
+# using else as catch
+
+x = int(input("What's x? "))
+y = int(input("What's y? "))
+
+if x < y:
+    print("x is less than y")
+elif x > y:
+    print("x is greater than y")
+elif x == y:
+    print("x is equal to y")
+# using elif because only one of these will be true
+# if you need more statements that are true, use if
+
+
+
