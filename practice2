@@ -1,0 +1,44 @@
+def main():
+    greet(to="Anton")
+    name = input("What's your name?").strip().capitalize()
+    greet(name)
+    print(multiply(n=10,m=50))
+    number1 = int(input("What's your first number?"))
+    number2 = int(input("What's your second number??"))
+    print(f"{name}, Your two entries multiplied together are:", multiply(number1,number2))
+#f is inside of a string. modifying a string
+    if number1 or number2 > 75:
+        print("Wow")
+    elif number1 or number2 > 50:
+        print("WOW")
+    elif number1 or number2 > 25:
+        print("WWWWOW")
+    else:
+        print("OK")
+
+    evenodd = input(f"{name}, Would you like to know if your first number: {number1} divided by your second number: {number2}, is even or odd? ").strip().capitalize()
+    evenoddnumber = divide(number1, number2)
+    if evenodd == "No":
+        print(f"Ok, {name}")
+    elif evenodd == "Yes" and evenoddnumber % 2 == 0:
+        print("Even")
+    else:
+        print("Odd")
+    lastnumber = int(input("OK, give me your last number and we will let you know if it is even or not. "))
+    if is_even(lastnumber):
+        print("It's even")
+    else:
+        print(f"{name}, It's not even...")
+    print(is_yourname(name))
+
+def greet(to):
+    print(to, "HELLOOO")
+def multiply(n, m):
+    return n * m
+def divide(x, y):
+    return x * y
+def is_even(x):
+    return True if x % 2 == 0 else False
+def is_yourname(x):
+    return True if x == "Anton" else False
+main()
