@@ -1,0 +1,27 @@
+def main():
+    greeting(to="Anton")
+    name = input(("What's your name? "))
+    greeting(name)
+    if name == "Anton":
+        print("You know what, my son's name is Anton...")
+    else:
+        print("Great name...")
+    input1 = input("Greeting: ").strip().capitalize()
+    if input1.startswith("Hello",0,5):
+        print(f"$0 of a return {name}")
+    elif input1.startswith("H", 0, 1):
+        print(f"$20 of a return {name}, nice.")
+    else:
+        print(f"$100 of a return {name}!!!")
+    i = 0
+    while i <= 5:
+        print(i)
+        i += 1
+    j = int(input("How many times would you like me to jump? "))
+    while j <= 5:
+        print("*jump*")
+        j += 1
+
+def greeting(to):
+    print("Hello", to)
+main()
