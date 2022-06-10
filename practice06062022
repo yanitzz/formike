@@ -1,27 +1,49 @@
 def main():
     greeting(to="Anton")
-    name = input(("What's your name? "))
+    name = input(("What's your name? ")).strip().capitalize()
     greeting(name)
     if name == "Anton":
-        print("You know what, my son's name is Anton...")
+        print("You know what, my name is Anton, too...")
     else:
         print("Great name...")
+    userAge = int(input("How old are you? "))
+    age(userAge)
+
     input1 = input("Greeting: ").strip().capitalize()
-    if input1.startswith("Hello",0,5):
-        print(f"$0 of a return {name}")
+    if input1.startswith("Hello",0,5):#counting each letter as index
+        print(f"$0 of a return {name}")#you can use f string to pass a variable inside string
     elif input1.startswith("H", 0, 1):
         print(f"$20 of a return {name}, nice.")
     else:
         print(f"$100 of a return {name}!!!")
+    print("I will count to 5...")
     i = 0
     while i <= 5:
         print(i)
-        i += 1
-    j = int(input("How many times would you like me to jump? "))
-    while j <= 5:
+        i += 1 #printing out each ____? index?
+    print("If you guess my number, I will jump once.")
+    j = int(input("You only get one guess: "))
+    if j == 4:
         print("*jump*")
-        j += 1
-
+    else:
+        print("You snooze you lose.")
+    while True:
+        k = int(input("How many times would you like me to skip? "))
+        if k > 0:
+            break;
+    for _ in range(k):
+        print("*SKIP*")
 def greeting(to):
     print("Hello", to)
+def age(of):
+    if of >= 100:
+        print("...wow")
+    elif of >= 90:
+        print("you're in the nineties!")
+    elif of >= 80:
+        print("you're pretty old.")
+    elif of >= 70:
+        print("you're getting there..")
+    elif of <= 69:
+        print("You're young")
 main()
