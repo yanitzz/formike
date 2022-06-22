@@ -1,0 +1,62 @@
+def main():
+    while True:
+        name = get_name()
+        age = get_age()
+        if is_confirmed(name, age):
+            print(f"Your name is {name}, and you are {age} years old.")
+            break;
+        else:
+            print("Please try again.")
+    print(f"{name}, Welcome to G A M E")
+    print("Press 1 to Count")
+    print("Press 2 to Level Up your Character")
+    print("Press 3 to --list--")
+    while True:
+        gameoption = int(input("What would you like to do?"))
+        if gameoption >=1 and gameoption <=3:
+            if gameoption == 1:
+                count()
+            elif gameoption == 2:
+                level_up()
+            else:
+                list_function()
+
+
+def get_name():
+    name = input("What's your name? ").strip().capitalize()
+    return name
+
+def get_age():
+    age = input("How old are you? ")
+    return age
+
+def is_confirmed(username, userage):
+    answer1 = input(f"Is your name {username}?").strip().capitalize()
+    answer2 = input(f"Are you {userage}").strip().capitalize()
+    return True if answer1 == "Yes" and answer2 == "Yes" else False
+
+def count():
+    i = int(input("What woud you like me to count to? "))
+    for _ in range(i):
+        print(_ + 1)
+        _ += 1
+
+def level_up():
+    insert_coin = 0
+    total_coins = 0
+    while True:
+        insert_coin = int(input("INSERT COIN: "))
+        if insert_coin <= 50:
+            if insert_coin == 25 or insert_coin == 10 or insert_coin == 5:
+                print(f"Coin inserted: {insert_coin}")
+                total_coins += insert_coin
+                print(f"Total Coins: {total_coins}")
+        if total_coins >= 50:
+            print("Enjoy your Drink!")
+            print(f"Your change is {total_coins - 50}")
+            break;
+
+
+def list_function():
+    print("list function")
+main()
