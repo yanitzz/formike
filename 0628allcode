@@ -1,0 +1,67 @@
+while True:
+    input = int(input("input: "))
+    if input > 0:
+        break;
+
+
+for i in [0, 1, 2]:     # for i in range(3)             or for i in range(input)
+    print("meow")
+
+students = ["Anton", "Amber"] # use brackets for 'list'
+                           # using a for loop to iterate through list
+for student in students: # student(declaring a counter variable)
+                         # students is declared as list above
+    print(student)       # here we are printing the counter ;student
+                         # this will print each object
+
+for i in range(len(students)):     #for loop, counter i, range takes int, use len
+    print(i + 1, students[i])       #the counter +1, students the variable
+                                    # you use i to iterate each object in list
+                                    # index into it ******
+                                    # or it will just print the full list
+
+pupils = {
+    "Anton" : "9th Grade",
+    "Amber" : "10th Grade",
+    "John" : "11th Grade"
+    }
+
+for i in pupils:            # for 'each pupil(key)' in pupils(the list - declared list variable)
+    print(i, pupils[i])     # print 'each pupil' and
+                            # index into the dict and print 'each pupil' and the corresponding value
+
+for j in pupils:            # for 'each pupil' in pupils(the list)
+    print("j", pupils[j])   # index into the list and print the corresponding values
+
+for k in pupils:            # for 'each pupil' in pupils(the list)
+    print("k", k)           # print 'each pupil'
+
+for l in pupils:            # for 'each pupil' in pupils(the list)
+    print("l", [l])         # NOT SURE - RESULT = ['Anton']
+
+for m in pupils:            # for 'each pupil' in pupils(the list)
+    print("m", pupils)      # print 'the list'
+
+for n in pupils:            # for 'each pupil' in pupils(the list)
+    print("n", pupils[n])   # index into the list and print the corresponding values
+
+residents = [
+        {
+            "name" : "Anton",
+            "town" : "Pompton Lakes",
+            "job" : "QA Tester"
+        },
+        {
+            "name" : "Amber",
+            "town" : "Barbados",
+            "job" : "Dancer"
+        },
+        {
+            "name" : "John",
+            "town" : "Ridgefield",
+            "job" : "Uber Driver"
+        }
+    ]
+
+for resident in residents:
+    print(resident["name"], resident["town"], resident["job"], sep=", ")
