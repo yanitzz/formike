@@ -1,0 +1,14 @@
+def main():
+    for c in get_input():
+        vowels = ["A", "O", "U", "E", "I", "a", "o", "u", "e", "i"]
+        if (c in vowels):
+            print(end="")
+        else:
+            print(c, end="")
+    print()
+
+def get_input():
+    user_input = input("Input: ")
+    print("No Vowels: ", end="")
+    return user_input
+main()
