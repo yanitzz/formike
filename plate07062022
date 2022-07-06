@@ -1,0 +1,43 @@
+def main():
+    plate = input("Plate: ")
+    if is_twoletters_valid(plate) and is_twosixchar_valid(plate) and is_not_firstnum(plate) and last_index_not_letter(plate):
+        print("Valid")
+    else:
+        print("Invalid")
+def is_twosixchar_valid(userinput):
+    if len(userinput) > 6 or len(userinput) < 2:
+        print("All Vanity plates may contain a maximum of 6 characters (letters or numbers) and a minimum of 2 characters.")
+        return False
+    else:
+        return True
+def is_twoletters_valid(userinput):
+    if userinput[0:2].isalpha():
+        return True
+    else:
+        print("All vanity plates must start with at least two letters")
+        return False
+def is_not_firstnum(userinput):
+    for i in userinput:
+        if i.isalpha():
+            print(end="")
+        else:
+            num = i
+            if num[0:1] == "0":
+                print("First number cannot be a 0")
+                return False
+            else:
+                return True
+    print()
+def last_index_not_letter(userinput):
+    print("Last index: ", userinput[-1])
+    if userinput[-1].isalpha():
+        print("Numbers cannot be used in the middle of a plate; they must come at the end. For example, AAA222 would be an acceptable … vanity plate; AAA22A would not be acceptable.")
+        return False
+    else:
+        return True
+
+#“All vanity plates must start with at least two letters.”
+#“… vanity plates may contain a maximum of 6 characters (letters or numbers) and a minimum of 2 characters.”
+#“Numbers cannot be used in the middle of a plate; they must come at the end. For example, AAA222 would be an acceptable … vanity plate; AAA22A would not be acceptable. The first number used cannot be a ‘0’.”
+#“No periods, spaces, or punctuation marks are allowed.”
+main()
