@@ -1,0 +1,19 @@
+def main():
+
+    x = input("Fruit: ").strip().capitalize()
+    calories(x)
+
+def calories(userinput):
+
+    nutrition = {
+        "Apple" : "10",
+        "Avocado" : "20",
+        "Banana" : "30"
+        }
+
+    if userinput in nutrition:
+        print(nutrition[userinput])
+    else:
+        print("Choose Valid Fruit")
+
+main()
