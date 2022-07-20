@@ -1,10 +1,12 @@
-def main():
-    x = get_int()
-    print(f"x is {x}")
-def get_int():
-    while True:
-        try:
-            return int(input("What's x: "))
-        except ValueError:
-            pass
+def main():             #the goal of main code is to keep it as short as possible
+                        #saving the result of the function to a variable
+    x = get_int("what's x? ")#passing parameter - this is the prompt that the user would see. best we do it in main so fxn can be re usable
+    print(f"x is {x}")  #using f to be able to use the above variable 'x'
+                        #need to create function
+def get_int(prompt):          #using an infinite loop, you will try to ask ?, checking for errors
+    while True:         #try block will be executed until BREAK
+        try:            #if the user inputs something that cannot be casted into an int
+            return int(input(prompt))#you will get an error. take that error and
+        except ValueError:#use it in a statement like this
+            pass        #if there is an error, except statement will be executed and you can choose to pass
 main()
